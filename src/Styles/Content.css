@@ -1,0 +1,144 @@
+
+.main-div {
+  background-color: #000 !important;
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+.data-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #000; /* Dark background color for the grid */
+  padding: 20px;
+  color: #fff; /* Text color */
+  justify-content: center;
+  align-content: flex-start;
+}
+
+/* Style for each grid item */
+.grid-item {
+  background-color: #333; /* Darker background color for grid items */
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  flex: 0 0 calc(25% - 20px);
+  margin-bottom: 20px;
+  border-radius: 0; /* Remove border radius for grid items */
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  animation: running-border-shadow 3s linear infinite, sparkle 1s infinite;
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-item button {
+  background-color: #111;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+/* Style for the pagination buttons */
+.pagination {
+  text-align: center;
+}
+
+.pagination button {
+  background-color: #333; /* Dark background for pagination buttons */
+  color: #fff; /* Text color for pagination buttons */
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Style for the popup container */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background for popup */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+}
+
+/* Style for the popup content */
+.popup-content {
+  background-color: #333;
+  color: #fff;
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  max-width: 400px; /* Set the maximum width as needed */
+  width: 80%; /* Adjust width as needed */
+  animation: running-border-shadow 3s linear infinite, sparkle 1s infinite;
+}
+
+.popup-content img{
+width: 80%;
+}
+
+/* Style for the close button in the popup */
+.close {
+  position: absolute;
+  top: 5px; /* Adjust top position as needed */
+  right: 5px; /* Adjust right position as needed */
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+/* Define the running border shadow animation */
+@keyframes running-border-shadow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 5px 0 10px rgba(255, 255, 255, 0.5),
+                0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 5px 0 10px rgba(255, 255, 255, 0.5),
+                0 0 10px rgba(255, 255, 255, 0.5),
+                -5px 0 10px rgba(255, 255, 255, 0.5);
+  }
+  75% {
+    box-shadow: 5px 0 10px rgba(255, 255, 255, 0.5),
+                -5px 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Define the sparkle animation */
+@keyframes sparkle {
+  0%, 100% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

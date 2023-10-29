@@ -1,0 +1,62 @@
+/* Banner.css */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('https://st2.depositphotos.com/1011081/8699/i/600/depositphotos_86997876-stock-photo-high-resolution-image-of-space.jpg');
+    align-items: center;
+    background-size: cover;
+    /* background-color: #000; */
+    color: #e4e7ec;
+    padding: 40px;
+  
+    /* Adjust the height as needed */
+    height: 500px;
+  }
+  
+  .firework {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #e6fffe;
+    border-radius: 50%;
+    animation: firework 2s ease-out;
+  }
+  
+  @keyframes firework {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(8);
+      opacity: 0;
+    }
+  }
+  .banner-text {
+    flex: 1;
+  }
+  
+  .banner-text h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  
+  .banner-text p {
+    font-size: 16px;
+    max-width: 400px;
+  }
+  
+  .banner-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .banner-image img {
+    width: 100%;
+    position: relative;
+    border-radius: 0,0,0,15px;
+    height: auto;
+  }
+  
+  
